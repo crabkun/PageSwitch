@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>PageSwitch</title>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/pageswitch.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mousewheel.js"></script>
+		<script src="js/jquery.touchSwipe.min.js"></script>
+		<script src="js/pageswitch.js"></script>
+	</head>
+	<body>	
+		<div class="arrow animated infinite rubberBand">
+			<img src="img/arrow.png"/>
+		</div>
+		<div class="nav nav-style2">
+			<ul class="navlist">
+				<li page="1">关于</li>
+				<li page="2">换页</li>
+				<li page="3">导航条</li>
+				<li page="4">动画</li>
+				<li page="5">作者</li>
+			</ul>
+		</div>
+		<div id="page-main">
+			<div class="page page-1">
+				<div id="pagebox">
+					<div id="logo">
+						<div class="animated rotateInDownLeft" id="inline"><span id="span1">Page</span></div>
+						<div class="animated rotateInUpRight" id="inline"><span id="span2">Switch</span></div>
+					</div>
+					<div class="animated fadeIn" style="animation-delay:1s;" >
+						<p>（基于Animated.css和JQuery的全屏div切换框架）</p>
+					</div>
+				</div>
+			</div>
+			<div class="page page-2">
+				<div id="pagebox">
+					<div class="text-box animated bounceInRight" style="position:relative;top:-20px;">
+						<h4>一、使用前请按顺序引用相关文件</h4>
+						animate.min.css<br/>
+						pageswitch.css<br/>
+						jquery.js<br/>
+						jquery.mousewheel.js(鼠标滚动支持)<br/>
+						jquery.touchSwipe.min.js(手机划屏支持)<br/>
+						pageswitch.js<br/>
+					</div>
+					<br/>
+					<div class="text-box animated bounceInLeft" style="position:relative;top:-20px;">
+						<h4>二、页div</h4>
+						&lt;div class="page-main"&gt;<br/>
+						　　&lt;div class="page page-1"&gt;<br/>
+						　　&lt;/div&gt;<br/>
+						　　&lt;div class="page page-2"&gt;<br/>
+						　　&lt;/div&gt;<br/>
+						　　&lt;div class="page page-3"&gt;<br/>
+						　　&lt;/div&gt;<br/>
+						&lt;/div&gt;<br/>
+						<strong>每一页的div必须要有"page"类</strong><br/><br/>
+						<strong>当用户在浏览某一页的时候，此页的div会出现page-current类。"</strong><br/>
+					</div>
+				</div>
+			</div>
+			<div class="page page-3">
+				<div id="pagebox">
+					<div class="text-box animated rollIn">
+						<h4>三、导航条</h4>
+						&lt;div class="nav nav-style2"&gt;<br/>
+						　　&lt;ul class="navlist"&gt;<br/>
+						　　　　&lt;li page="1"&gt;关于&lt;/li&gt;<br/>
+						　　　　&lt;li page="2"&gt;换页&lt;/li&gt;<br/>
+						　　　　&lt;li page="3"&gt;导航条&lt;/li&gt;<br/>
+						　　　　&lt;li page="4"&gt;动画&lt;/li&gt;<br/>
+						　　　　&lt;li page="5"&gt;作者&lt;/li&gt;<br/>
+						　　&lt;/ul&gt;<br/>
+						&lt;/div&gt;<br/>
+						<strong>导航条为ul形式，并且必须要加navlist类</strong><br/><br/>
+						<strong>其中ul的第几个li代表第几页</strong><br/><br/>
+						<strong>li必须要有page属性而且值为页号</strong><br/><br/>
+						<strong>本框架自带两种导航条样式，请在ul的父div加上nav-style1或者nav-style2使用，其中前者为竖向导航条，后者为横向导航条</strong>
+					</div>
+				</div>
+			</div>
+			<div class="page page-4">
+				<div id="pagebox">
+					<div class="text-box animated zoomInRight">
+						<h4>四、动画</h4>
+						本框架的动画特效基于<strong>animate.css</strong><br/><br/>
+						您可以直接使用<strong>animate.css</strong>的动画效果<br/><br/>
+						<strong>animate.css</strong>自带的动画效果可以去<a href="https://daneden.github.io/animate.css/"><strong>这里</strong></a>查看<br/><br/>
+						使用方法：<br/>
+						<strong>在需要动画效果的div加上animated类和动画名字类即可，例如<br/>
+						&lt;div class="animated bounce"&gt;<br/>
+						　　　...<br/>
+						&lt;/div&gt;<br/>
+						·其中animated类为必要，bounce为动画名<br/>
+						·请勿在页div(有page类的div)加入动画类<br/>
+						·如需无限循环播放可加入infinite类<br/>
+						·如需调整速度和延迟，可在css添加：<br/>
+						animation-duration(播放速度属性)<br/>
+						animation-delay(延迟播放属性)<br/></strong>
+					</div>
+				</div>
+			</div>
+			<div class="page page-5">
+				<div id="pagebox">
+					<div id="avatar-box">
+						<img src="http://crab.pub/avatar.png" width="204"/>
+					</div>
+					<div id="about">
+					<strong>
+					<br/>螃蟹<br/>
+					QQ:529493022<br/>
+					PageSwitch1.0@2017.2.14<br/>
+					</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
